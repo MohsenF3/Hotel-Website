@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap");
+
+:root {
+  /* ===== bg colors ===== */
+  --first-color: #5b9a8b;
+  --second-color: #f7e987;
+  --bg-color: #252b48;
+  --bg-color-alt: #445069;
+  --bg-white: #fff;
+  --bg-black: #000;
+
+  /* ==== text font ==== */
+  --first-font: "Poppins", sans-serif;
+  --second-font: "Oswald", sans-serif;
+
+  /* ==== font size ==== */
+
+  --h1: 2.975rem;
+  --h2: 2.188rem;
+  --h3: 1.563rem;
+  --h4: 1.125rem;
+  --h5: 0.938rem;
+  --h6: 0.813rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--first-font);
+  background-color: var(--bg-color);
+  color: var(--bg-white);
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+section {
+  margin-bottom: 6em;
+}
+
+/* === scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--first-color);
+  border-radius: 0.1em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 0.1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color);
+}
+
+/* ============ reusable class ============*/
+
+.section-title {
+  text-align: center;
+  color: var(--bg-white);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
+  font-size: var(--h2);
+}
+.section-title span {
+  color: var(--second-color);
+}
+.section-subtitle {
+  display: block;
+  text-align: center;
+  color: var(--bg-white);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.custom-btn {
+  color: var(--bg-color-alt);
+  font-weight: 500;
+  display: inline-block;
+  font-size: 18px;
+  padding: 0.5rem 2rem;
+  border-radius: 0.7rem;
+  border: 2px solid var(--second-color);
+  transition: all 0.3s ease;
+}
+.custom-btn:hover {
+  background-color: var(--first-color);
+  color: var(--bg-white);
+  border-color: var(--first-color);
+}
+
+/* ///////////////// header //////////////////////// */
+.header .navbar {
+  background-color: var(--bg-white);
+  padding-block: 1.3rem;
+}
+.header .navbar .nav-item {
+  margin-inline: 0.3rem;
+}
+.header .navbar .nav-item .nav-link {
+  position: relative;
+  font-size: var(--h4);
+  font-weight: 500;
+  color: var(--bg-color-alt);
+  transition: all 0.4s ease;
+}
+.header .navbar .nav-item .nav-link::before,
+.header .navbar .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--second-color);
+  transition: all 0.4s ease;
+}
+.header .navbar .nav-item .nav-link:hover,
+.header .navbar .nav-item .nav-link.active {
+  color: var(--second-color);
+}
+.header .navbar .nav-item .nav-link:hover::before,
+.header .navbar .nav-item .nav-link.active::before {
+  width: 100%;
+}
+.header .navbar-toggler:focus,
+.header .btn-close:focus {
+  box-shadow: none;
+}
+/* ///////////// about /////////////////// */
+
+.home .carousel-img {
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+}
+.home .carousel-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-black);
+  opacity: 0.5;
+}
+.home .carousel-caption {
+  bottom: 4rem;
+}
+.home .carousel-caption h3 {
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+.home .carousel-caption p {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.home .carousel-indicators button {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--second-color);
+  border: 2px solid var(--bg-white);
+}
+.home .booking-area {
+  position: relative;
+  background-color: var(--bg-white);
+  z-index: 2;
+  margin-top: -2em;
+  padding: 3rem;
+  box-shadow: 0px 10px 10px var(--bg-color-alt);
+}
+.home .booking-area .form-control,
+.home .booking-area .form-select {
+  padding: 0.7rem 1.5rem;
+}
+.home .booking-area .form-control:focus,
+.home .booking-area .form-select:focus {
+  box-shadow: none;
+}
+.home .booking-area .form-btn {
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.home .booking-area .form-btn:hover {
+  background-color: var(--first-color);
+  color: var(--bg-white);
+}
+/* ////////////// about ////////////// */
+.about .about-title {
+  font-size: var(--h2);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+.about .about-title span {
+  color: var(--second-color);
+}
+.about .about-description {
+  margin-block: 1.5rem 3.5rem;
+}
+.about .about-btn {
+  color: var(--bg-white);
+  padding: 0.7rem 5rem;
+}
+/* ///////////// rooms ///////////// */
+.rooms .rooms-card {
+  position: relative;
+  box-shadow: 5px 5px 15px var(--bg-color-alt);
+  overflow: hidden;
+}
+
+.rooms .rooms-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-black);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.rooms .rooms-card:hover::before {
+  opacity: 1;
+  opacity: 0.6;
+}
+
+.rooms .rooms-card .rooms-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 3rem 1.5rem;
+  padding: 2rem;
+  border: 2px solid var(--bg-white);
+  z-index: 3;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+.rooms .rooms-card:hover .rooms-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.rooms .rooms-card .rooms-content h4 {
+  text-decoration: underline;
+}
+.rooms .rooms-card .rooms-content p {
+  font-size: var(--h6);
+  margin-block: 2rem 1.5rem;
+}
+.rooms .rooms-card .rooms-content span {
+  font-weight: 600;
+  margin-bottom: 4rem;
+  display: block;
+}
+.rooms .rooms-card .rooms-content .rooms-btn {
+  color: var(--bg-white);
+}
+/* //////// services ////////// */
+.services .services-row {
+  background: linear-gradient(109deg, transparent 43%, var(--bg-color-alt) 34%);
+}
+
+.services .services-item {
+  margin-bottom: 1rem;
+  column-gap: 1.5rem;
+}
+.services .services-item:nth-child(2) {
+  transform: translateX(-5%);
+}
+.services .services-item:nth-child(3) {
+  transform: translateX(-10%);
+}
+.services .services-item:nth-child(4) {
+  transform: translateX(-15%);
+}
+.services .services-item .services-item-icon {
+  border-radius: 50%;
+  width: 4.7rem;
+  height: 4.7rem;
+  background-color: var(--first-color);
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px var(--bg-color);
+}
+.services .services-item .services-item-icon:hover,
+.services .services-item .services-item-icon.active {
+  background-color: var(--second-color);
+  color: var(--first-color);
+  box-shadow: 5px 10px 25px var(--bg-color);
+}
+
+.services .services-item .services-item-icon img {
+  object-fit: cover;
+  width: 50%;
+}
+.services .services-item .services-item-info h3 {
+  font-weight: 500;
+  font-size: var(--h3);
+}
+.services .services-item .services-item-info p {
+  font-size: var(--h5);
+}
+.services .services-item .services-item-info p span {
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+/* /////// banner //////// */
+.banner .banner-container {
+  background: url(../images/bg2.webp);
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.banner .banner-container h3 {
+  font-weight: 600;
+  font-size: var(--h1);
+}
+/* //////////// team /////////// */
+.team .team-card {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.team .team-card:hover .team-card-overlay {
+  top: 0;
+}
+.team .team-card .team-card-overlay {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% - 3px);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--first-color),
+    var(--second-color)
+  );
+  transition: 0.5s;
+}
+.team .team-card .team-card-content {
+  z-index: 2;
+  position: relative;
+}
+.team .team-card .team-card-content h3 {
+  font-weight: 600;
+  font-size: var(--h4);
+  margin-block: 2rem 1rem;
+}
+.team .team-card .team-card-content span {
+  display: block;
+  font-size: var(--h6);
+  margin-bottom: 2rem;
+}
+.team .team-card .team-card-content .team-card-img {
+  width: 9rem;
+  height: 9rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.team .team-card .team-card-content .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+
+.team .team-card .team-card-content .social a {
+  padding: 0.8rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.team .team-card .team-card-content .social a:hover {
+  opacity: 0.7;
+}
+
+.team .team-card:hover .fa-snapchat-ghost {
+  background: #fffc00;
+}
+.team .team-card:hover .fa-instagram {
+  background: #e1306c;
+}
+.team .team-card:hover .fa-twitter {
+  background: #55acee;
+}
+.team .team-card:hover .fa-google {
+  background: #dd4b39;
+}
+
+.fa-snapchat-ghost {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-instagram {
+  color: white;
+}
+
+.fa-twitter {
+  color: white;
+}
+
+.fa-google {
+  color: white;
+}
+
+/* /////////// price ////////// */
+.price .price-card {
+  border: 1px solid var(--bg-white);
+  background-color: var(--bg-color-alt);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.price .price-card .price-card-header {
+  border-bottom: 1px solid var(--bg-white);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.price .price-card .price-card-header h3 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: var(--second-color);
+  font-weight: 600;
+}
+.price .price-card .price-card-header p {
+  font-size: var(--h5);
+}
+.price .price-card .price-card-footer span {
+  font-size: var(--h2);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.price .price-card .price-card-footer span span {
+  font-size: var(--h5);
+  font-weight: 400;
+}
+.price .price-card .price-card-footer .price-btn {
+  display: block;
+  margin-top: 1rem;
+  color: var(--bg-white);
+}
+
+.price .swiper .swiper-slide img {
+  filter: invert(1);
+}
+/* /////// footer ///////// */
+.footer {
+  background-color: var(--bg-color-alt);
+  padding-block: 2.5rem;
+}
+.footer .footer-item p {
+  font-size: var(--h6);
+  margin-bottom: 1.6rem;
+}
+.footer .footer-item .footer-title {
+  font-weight: 600;
+  font-size: var(--h3);
+  margin-bottom: 1rem;
+}
+.footer .footer-item .footer-info .footer-info-item {
+  color: var(--second-color);
+}
+.footer .footer-item .footer-info .footer-info-item i {
+  margin-right: 0.5rem;
+}
+.footer .footer-item .footer-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+}
+.footer .footer-item .footer-links .footer-link {
+  color: var(--bg-white);
+  transition: all 0.3s ease;
+}
+.footer .footer-item .footer-links .footer-link:hover {
+  margin-left: 0.4rem;
+  color: var(--second-color);
+}
+.footer .footer-item input {
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+.footer .footer-item input:focus {
+  box-shadow: none;
+}
+
+.footer .footer-item .footer-btn {
+  margin-bottom: 1rem;
+}
+
+.footer .footer-item .footer-social {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.footer .footer-item .footer-social .footer-social-icon {
+  border: 1px solid var(--bg-white);
+  border-radius: 50%;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+.footer .footer-item .footer-social .footer-social-icon:nth-child(1):hover {
+  background: #55acee;
+}
+.footer .footer-item .footer-social .footer-social-icon:nth-child(2):hover {
+  background: #e1306c;
+}
+.footer .footer-item .footer-social .footer-social-icon:nth-child(3):hover {
+  background: #dd4b39;
+}
+.footer .footer-item .footer-social .footer-social-icon:nth-child(4):hover {
+  background: #fffc00;
+}
+
+.footer .copy-section {
+  text-align: center;
+}
+
+.footer .copy-section span span {
+  color: var(--second-color);
+}

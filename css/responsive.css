@@ -1,0 +1,40 @@
+@media screen and (max-width: 1400px) {
+  .home .booking-area {
+    padding-inline: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .services .services-row {
+    background: var(--bg-color-alt);
+  }
+  .services .services-item:nth-child(2) {
+    transform: translateX(0%);
+  }
+  .services .services-item:nth-child(3) {
+    transform: translateX(0%);
+  }
+  .services .services-item:nth-child(4) {
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .rooms .rooms-card .rooms-content {
+    margin: 2rem 1.5rem;
+  }
+  .rooms .rooms-card .rooms-content span {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home .carousel-caption p {
+    max-width: 100%;
+  }
+  .banner .banner-container {
+    padding: 3rem;
+  }
+
+  .services .services-item .services-item-icon img {
+    width: 65%;
+  }
+}

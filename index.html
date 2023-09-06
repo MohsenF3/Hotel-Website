@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel=" icon" href="./images/favicon.png" type="image/png" />
+    <!-- ===================== swiper    ========================= -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- ===================== bootstrap    ========================= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- ===================== fontawesome =========================== -->
+    <script
+      src="https://kit.fontawesome.com/2298c35404.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ============= css files =============== -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Hotel</title>
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="100"
+    data-bs-smooth-scroll="true"
+  >
+    <!-- =========================== header =============================== -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" alt="LOGO" class="img-fluid" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+          >
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+          <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="./images/logo.png" alt="LOGO" class="img-fluid" />
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul
+                class="navbar-nav align-items-center justify-content-end flex-grow-1"
+              >
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link" href="#about">about</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link" href="#rooms">rooms</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link" href="#services">services</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link" href="#team">team</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="nav-link" href="#price">price</a>
+                </li>
+                <li class="nav-item mb-3 mb-lg-0">
+                  <a class="custom-btn" href="#booking">book now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- =========================== end of header =============================== -->
+
+    <!-- =========================== home =============================== -->
+    <section class="home" id="home">
+      <div class="home-carousel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators mb-5">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="carousel-img"
+                style="
+                  background: url(./images/slider/slider1.webp);
+                  background-attachment: fixed;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="carousel-caption">
+                <h3>welcome to hotel in dubai</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur culpa non deleniti? Sit, nobis nesciunt!
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="carousel-img"
+                style="
+                  background: url(./images/slider/slider2.webp);
+                  background-attachment: fixed;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              ></div>
+              <div class="carousel-caption">
+                <h3>welcome to hotel in Greece</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Aspernatur culpa non deleniti? Sit, nobis nesciunt!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container booking-area">
+        <form class="row">
+          <div class="col-lg mb-3 mb-lg-0">
+            <input type="date" class="form-control" />
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <input type="date" class="form-control" />
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <select class="form-select">
+              <option selected>ADULTS</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <select class="form-select">
+              <option selected>CHILDREN</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <button type="submit" class="form-control form-btn">
+              check availibilty
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- =========================== end of home =============================== -->
+    <!-- =========================== about =============================== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div
+          class="row text-center text-lg-start flex-column-reverse flex-lg-row"
+        >
+          <div class="col-lg-7">
+            <h3 class="about-title">
+              welcome to
+              <span
+                >hotel <br />
+                the haven</span
+              >of your weekend
+            </h3>
+            <p class="about-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a
+              mollitia dignissimos voluptatem neque delectus beatae
+              necessitatibus consectetur, error corrupti.
+            </p>
+            <a href="#" class="custom-btn about-btn">explore</a>
+          </div>
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <img
+              src="./images/about-img.svg"
+              alt="About Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================== end of about =============================== -->
+
+    <!-- =========================== rooms =============================== -->
+    <section class="rooms" id="rooms">
+      <span class="section-subtitle">what i can do for you</span>
+      <h3 class="section-title">our favorite <span>rooms</span></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mb-5 mb-lg-0">
+            <div class="rooms-card">
+              <img
+                src="./images/room/room1.webp"
+                alt="Rooms Image"
+                class="img-fluid"
+              />
+              <div class="rooms-content">
+                <h4>royal suit</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Repellat debitis saepe placeat asperiores quas molestiae ea
+                  nam necessitatibus omnis assumenda.
+                </p>
+                <span>$220 / per night</span>
+                <a href="#booking" class="custom-btn rooms-btn">booking now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-5 mb-lg-0">
+            <div class="rooms-card">
+              <img
+                src="./images/room/room2.webp"
+                alt="Rooms Image"
+                class="img-fluid"
+              />
+              <div class="rooms-content">
+                <h4>royal suit</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Repellat debitis saepe placeat asperiores quas molestiae ea
+                  nam necessitatibus omnis assumenda.
+                </p>
+                <span>$220 / per night</span>
+                <a href="#booking" class="custom-btn rooms-btn">booking now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mb-5 mb-lg-0">
+            <div class="rooms-card">
+              <img
+                src="./images/room/room3.webp"
+                alt="Rooms Image"
+                class="img-fluid"
+              />
+              <div class="rooms-content">
+                <h4>royal suit</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Repellat debitis saepe placeat asperiores quas molestiae ea
+                  nam necessitatibus omnis assumenda.
+                </p>
+                <span>$220 / per night</span>
+                <a href="#booking" class="custom-btn rooms-btn">booking now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =======================s==== end of rooms =============================== -->
+    <!-- =========================== services =============================== -->
+    <section class="services" id="services">
+      <span class="section-subtitle">we are here for you</span>
+      <h3 class="section-title">our awesome <span>services</span></h3>
+      <div class="container">
+        <div class="row services-row align-items-center">
+          <div class="col-xl-6 mb-4 mb-xl-0">
+            <img
+              src="./images/services/service1.webp"
+              alt="Services Image"
+              class="img-fluid services-img"
+            />
+          </div>
+          <div class="col-xl-6">
+            <div class="services-item d-flex align-items-center">
+              <div
+                class="services-item-icon"
+                onclick="handleServices(this)"
+                id="number-one"
+              >
+                <img
+                  src="./images/services/service-icon1.webp"
+                  alt="Services Icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="services-item-info">
+                <h3>spa , beauty & health</h3>
+                <p>
+                  <span>spa and beauty</span> Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit.x
+                </p>
+              </div>
+            </div>
+            <div class="services-item d-flex align-items-center">
+              <div
+                class="services-item-icon"
+                onclick="handleServices(this)"
+                id="number-two"
+              >
+                <img
+                  src="./images/services/service-icon2.webp"
+                  alt="Services Icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="services-item-info">
+                <h3>resturant</h3>
+                <p>
+                  <span>resturant</span> Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit.x
+                </p>
+              </div>
+            </div>
+            <div class="services-item d-flex align-items-center">
+              <div
+                class="services-item-icon"
+                onclick="handleServices(this)"
+                id="number-three"
+              >
+                <img
+                  src="./images/services/service-icon3.webp"
+                  alt="Services Icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="services-item-info">
+                <h3>swimming pool</h3>
+                <p>
+                  <span>swimming pool</span> Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit.x
+                </p>
+              </div>
+            </div>
+            <div class="services-item d-flex align-items-center">
+              <div
+                class="services-item-icon"
+                onclick="handleServices(this)"
+                id="number-four"
+              >
+                <img
+                  src="./images/services/service-icon4.webp"
+                  alt="Services Icon"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="services-item-info">
+                <h3>conference hall</h3>
+                <p>
+                  <span>conference</span> Lorem ipsum, dolor sit amet
+                  consectetur adipisicing elit.x
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================== end of services =============================== -->
+    <!-- =========================== banner =============================== -->
+    <section class="banner">
+      <div class="container-fluid banner-container">
+        <div class="row">
+          <div class="col-6 mb-4 mb-lg-0 col-lg-3">
+            <h3 id="count1"></h3>
+            <span>happy clients</span>
+          </div>
+          <div class="col-6 mb-4 mb-lg-0 col-lg-3">
+            <h3 id="count2"></h3>
+            <span>new friendship</span>
+          </div>
+          <div class="col-6 mb-4 mb-lg-0 col-lg-3">
+            <h3 id="count3"></h3>
+            <span>five star rating</span>
+          </div>
+          <div class="col-6 mb-4 mb-lg-0 col-lg-3">
+            <h3 id="count4"></h3>
+            <span>served breakfast</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================== end of banner =============================== -->
+
+    <!-- =========================== team =============================== -->
+    <section class="team" id="team">
+      <span class="section-subtitle">what i can do for you</span>
+      <h3 class="section-title">our special <span>staff</span></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="team-card">
+              <div class="team-card-overlay"></div>
+              <div class="team-card-content">
+                <div class="team-card-img">
+                  <img
+                    src="./images/team/team1.webp"
+                    alt="Team Image"
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>shrirley gibson</h3>
+                <span>manager</span>
+                <div class="social">
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-google"></a>
+                  <a href="#" class="fa fa-snapchat-ghost"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="team-card">
+              <div class="team-card-overlay"></div>
+              <div class="team-card-content">
+                <div class="team-card-img">
+                  <img
+                    src="./images/team/team2.webp"
+                    alt="Team Image"
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>ronald long</h3>
+                <span>chif officer</span>
+                <div class="social">
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-google"></a>
+                  <a href="#" class="fa fa-snapchat-ghost"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="team-card">
+              <div class="team-card-overlay"></div>
+              <div class="team-card-content">
+                <div class="team-card-img">
+                  <img
+                    src="./images/team/team3.webp"
+                    alt="Team Image"
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>ashley sanchez</h3>
+                <span>master chif</span>
+                <div class="social">
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-google"></a>
+                  <a href="#" class="fa fa-snapchat-ghost"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="team-card">
+              <div class="team-card-overlay"></div>
+              <div class="team-card-content">
+                <div class="team-card-img">
+                  <img
+                    src="./images/team/team4.webp"
+                    alt="Team Image"
+                    class="img-fluid"
+                  />
+                </div>
+                <h3>jessica watson</h3>
+                <span>housekeeping</span>
+                <div class="social">
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-google"></a>
+                  <a href="#" class="fa fa-snapchat-ghost"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================== end of team =============================== -->
+    <!-- =========================== price =============================== -->
+    <section class="price" id="price">
+      <span class="section-subtitle">best & affordable price for you</span>
+      <h3 class="section-title">our <span>pricing</span></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="price-card">
+              <div class="price-card-header">
+                <h3>economic</h3>
+                <p>flight ticket (2)</p>
+                <p>music concert (30% off)</p>
+                <p>resturant (snacks)</p>
+                <p>face make (no)</p>
+              </div>
+              <div class="price-card-footer">
+                <span>$150<span>/night</span></span>
+                <a href="#" class="custom-btn price-btn">sign up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="price-card">
+              <div class="price-card-header">
+                <h3>economic</h3>
+                <p>flight ticket (2)</p>
+                <p>music concert (30% off)</p>
+                <p>resturant (snacks)</p>
+                <p>face make (no)</p>
+              </div>
+              <div class="price-card-footer">
+                <span>$150<span>/night</span></span>
+                <a href="#" class="custom-btn price-btn">sign up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="price-card">
+              <div class="price-card-header">
+                <h3>economic</h3>
+                <p>flight ticket (2)</p>
+                <p>music concert (30% off)</p>
+                <p>resturant (snacks)</p>
+                <p>face make (no)</p>
+              </div>
+              <div class="price-card-footer">
+                <span>$150<span>/night</span></span>
+                <a href="#" class="custom-btn price-btn">sign up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="price-card">
+              <div class="price-card-header">
+                <h3>economic</h3>
+                <p>flight ticket (2)</p>
+                <p>music concert (30% off)</p>
+                <p>resturant (snacks)</p>
+                <p>face make (no)</p>
+              </div>
+              <div class="price-card-footer">
+                <span>$150<span>/night</span></span>
+                <a href="#" class="custom-btn price-btn">sign up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper mySwiper mt-5 container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/partners/brand1.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/partners/brand2.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/partners/brand3.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/partners/brand4.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/partners/brand5.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/partners/brand6.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== end of price =============================== -->
+
+    <!-- =========================== footer =============================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+            <div class="footer-item">
+              <h3 class="footer-title">hotel location</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet atque aliquam eaque ipsa ad cupiditate!
+              </p>
+              <div class="footer-info">
+                <div class="footer-info-item">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  shiraz , iran
+                </div>
+                <div class="footer-info-item">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  +1 222 2323
+                </div>
+                <div class="footer-info-item">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  3mohsenfaramarzi@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+            <div class="footer-item">
+              <h3 class="footer-title">more links</h3>
+              <div class="footer-links">
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  about us
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  our office
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  our store
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  return policy
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  delivery
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+            <div class="footer-item">
+              <h3 class="footer-title">demo links</h3>
+              <div class="footer-links">
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  about us
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  our office
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  our store
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  return policy
+                </a>
+                <a href="#" class="footer-link">
+                  <i class="fa fa-arrow-right"></i>
+                  delivery
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0">
+            <div class="footer-item">
+              <h3 class="footer-title">newsletter</h3>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="enter your email here"
+              />
+              <button type="submit" class="custom-btn footer-btn">
+                subscribe
+              </button>
+              <h3 class="footer-title">stay connected</h3>
+              <div class="footer-social">
+                <a href="#" class="fa fa-twitter footer-social-icon"></a>
+                <a href="#" class="fa fa-instagram footer-social-icon"></a>
+                <a href="#" class="fa fa-google footer-social-icon"></a>
+                <a href="#" class="fa fa-snapchat-ghost footer-social-icon"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="copy-section">
+            <i class="fa fa-copyright"></i>
+            <span> <span>Mohsen</span> , all right reserved</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =========================== end of footer =============================== -->
+
+    <!-- ============== bootstrap js ============================ -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ===================== swiper js ========================= -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- =============== my js ================== -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
